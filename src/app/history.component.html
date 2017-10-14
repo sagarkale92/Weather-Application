@@ -1,0 +1,15 @@
+<!-- Display searched history -->
+<div class="container">
+  <div *ngIf="locations?.length == 0;">
+    <button type="button" class="btn btn-primary" disabled>Clear Search History</button>
+  </div>
+  <div *ngIf="locations?.length > 0;">
+    <button type="button" class="btn btn-primary" (click)="clearSearchHistory()">Clear Search History</button>
+  <div>
+  <div>&nbsp;</div>
+  <div class="list-group">
+    <a *ngFor="let location of locations" [routerLink]="['/weather/',location.lat,location.lng,location.name]" id="location-details" class="list-group-item list-group-item-action">
+      {{location.name}}
+    </a>
+  </div>
+</div>

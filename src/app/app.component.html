@@ -1,0 +1,22 @@
+<!--Weather app title-->
+<div style="text-align:center">
+  <h1 style="color:white">
+    Welcome to the {{title}}!
+  </h1>
+</div>
+
+<!--Navigation-->
+<nav class="navbar sticky-top navbar-light bg-faded" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" routerLink="/search" routerLinkActive="active">Search</a>
+  <a class="navbar-brand" routerLink="/history" routerLinkActive="active">History</a>
+</nav>
+
+<!--Router outlet to change content on navigation-->
+<router-outlet></router-outlet>
+
+<!--Footer-->
+<footer class="navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <span>&copy; Sagar Kale</span>
+  </div>
+</footer>

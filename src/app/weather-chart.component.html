@@ -1,0 +1,13 @@
+<!-- Chart to display forecast data -->
+<div class="container">
+  <div class="jumbotron">
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"></canvas>
+    </div>
+  </div>
+</div>

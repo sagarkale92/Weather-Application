@@ -1,0 +1,39 @@
+<!-- Spinner while loading data -->
+<spinner name="loadingSpinner" [(show)]="spinnerShow" >
+  <div class="container loadingSpinner"></div>
+</spinner>
+
+<!-- Forecast -->
+<div class="container" *ngIf="contentShow" >
+  <div class="well">
+    <h3 class="well"><strong>Forecast:</strong> {{forecast}}</h3>
+  </div>
+</div>
+
+<!-- Weather Data Display-->
+<div class="container" *ngIf="contentShow">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="jumbotron text-primary">
+        <h1 class="well">{{temperature}} °F</h1>
+        <h3>{{time}}</h3>
+        <h3>Maximum Temperature: {{max_temp}} °F</h3>
+        <h3>Minimum Temperature: {{min_temp}} °F</h3>
+      </div>
+    </div>
+    <div class="col-sm-6" *ngIf="contentShow">
+        <div class="jumbotron text-primary">
+          <h2 class="well">{{address}}</h2>
+          <h3>Summary: {{summary}}</h3>
+          <h3>Precipitation: {{precipitation}}%</h3>
+          <h3>Humidity: {{humidity}}%</h3>
+          <h3>Wind: {{windspeed}} mph</h3>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Weather Chart Display -->
+<div *ngIf="contentShow">
+  <weather-chart></weather-chart>
+</div>
